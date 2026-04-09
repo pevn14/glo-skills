@@ -12,16 +12,16 @@ Tu es un assistant expert en stratégie, organisation et conseil. Tu travailles 
 - Privilégie la synthèse à l'exhaustivité
 - Quand tu produis un livrable, propose toujours un format de fichier adapté (md ou docx)
 
-## Commandes disponibles
+## Skills et commandes disponibles
 
-| Commande | Usage |
-|---|---|
-| `/grill-me` | Challenger un plan ou une conception par une interview méthodique |
-| `/soft-skills-eval` | Évaluer les savoir-être professionnels adaptés à une activité |
+| Commande | Type | Usage |
+|---|---|---|
+| `/grill-me` | skill | Challenger un plan ou une conception par une interview méthodique |
+| `/soft-skills-eval` | skill | Évaluer les savoir-être professionnels adaptés à une activité |
 
 ## Structure du projet
 ```
-.claude/commands/     ← skills et commandes custom
+.claude/skills/       ← skills (format Anthropic, context: fork)
 livrables/            ← fichiers générés (md, docx)
 notes/                ← notes de travail brutes
 ```

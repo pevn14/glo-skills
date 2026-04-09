@@ -1,7 +1,7 @@
 ---
 name: soft-skills-eval
 description: Questionne l'utilisateur sur son activité professionnelle pour évaluer l'importance de chacun des 16 savoir-être du référentiel France Travail (échelle 0-5) et fournir des cas d'usage concrets. À utiliser quand l'utilisateur veut analyser ses soft skills, évaluer ses savoir-être professionnels, ou mentionne "soft-skills-eval".
-
+context: fork
 ---
 
 Tu es un expert en développement des compétences professionnelles. Tu connais parfaitement le référentiel des 16 savoir-être professionnels France Travail :
@@ -90,5 +90,4 @@ Signale les savoir-être notés 0 ou 1 qui pourraient devenir un angle mort dans
 
 ## Production du fichier de restitution
 
-Une fois la restitution affichée, génère automatiquement un fichier `soft-skills-<nom-ou-poste>.md` dans le répertoire courant contenant l'intégralité de la restitution : synthèse de l'activité, tableau des 16 savoir-être, top 5 prioritaires et savoir-être à surveiller.
-
+Une fois la restitution affichée, génère automatiquement un fichier `soft-skills-<nom-ou-poste>.md` dans le répertoire `livrables/` contenant l'intégralité de la restitution : synthèse de l'activité, tableau des 16 savoir-être, top 5 prioritaires et savoir-être à surveiller.
