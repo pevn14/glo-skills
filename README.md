@@ -19,14 +19,18 @@ claude --version
 ## Structure du projet
 ```
 .
-├── CLAUDE.md                  ← contexte et règles globales pour Claude Code
+├── CLAUDE.md                        ← contexte et règles globales pour Claude Code
 ├── README.md
 ├── .claude/
-│   └── commands/              ← skills disponibles en slash commands
-│       ├── grill-me.md
-│       └── soft-skills-eval.md
-├── livrables/                 ← fichiers générés (md, docx)
-└── notes/                     ← notes de travail brutes
+│   └── skills/                      ← skills disponibles en slash commands
+│       ├── grill-me/
+│       │   └── SKILL.md
+│       └── soft-skills-eval/
+│           ├── SKILL.md
+│           ├── referentiel-france-travail.md
+│           └── referentiel-world-economic-forum.md
+├── livrables/                       ← fichiers générés (ignorés par git)
+└── notes/                           ← notes de travail brutes
 ```
 
 ---
@@ -43,17 +47,25 @@ claude
 Interview méthodique pour challenger un plan ou une conception.
 Claude parcourt chaque branche de l'arbre de décision et fournit sa recommandation pour chaque question.
 ```
-> /grill-me voici mon plan : ...
+> /grill-me
 ```
 
 ### `/soft-skills-eval`
 
-Évalue les 16 savoir-être professionnels du référentiel France Travail adaptés à une activité donnée.
-Claude mène une interview puis produit :
-- un tableau d'évaluation de chaque savoir-être (note 0 à 5)
-- un top 5 des savoir-être critiques avec cas d'usage concrets
+Évalue les soft skills professionnels adaptés à une activité donnée, en s'appuyant sur deux référentiels croisés :
+- **France Travail** — 16 savoir-être professionnels
+- **World Economic Forum** — Future of Jobs 2025 (10 compétences)
+
+Deux modes d'entrée :
+- **Interview** — Claude pose 10 à 15 questions une par une
+- **Fiche de poste** — colle directement une fiche de poste, Claude extrait les informations automatiquement
+
+Claude produit :
+- un tableau consolidé avec origine de chaque compétence (FT / WEF / FT+WEF / FT≈WEF)
+- un top 5 des compétences critiques avec cas d'usage concrets et pistes de développement
 - les angles morts à surveiller
-- un fichier de restitution dans `livrables/` (format md ou docx au choix)
+- un fichier de restitution dans `livrables/`
+
 ```
 > /soft-skills-eval
 ```
@@ -62,12 +74,20 @@ Claude mène une interview puis produit :
 
 ## Ajouter un skill
 
-Crée un fichier `.md` dans `.claude/commands/` avec le format suivant :
+Crée un dossier dans `.claude/skills/` avec un fichier `SKILL.md` :
+```
+.claude/skills/
+└── nom-du-skill/
+    └── SKILL.md
+```
+
+Format du fichier `SKILL.md` :
 ```markdown
 ---
 name: nom-du-skill
 description: Description courte — quand utiliser ce skill.
 ---
+
 Instructions détaillées pour Claude...
 ```
 

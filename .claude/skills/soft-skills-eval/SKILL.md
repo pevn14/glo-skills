@@ -23,9 +23,28 @@ Adapte ensuite l'intégralité de la session (questions, tableaux, restitution) 
 - **Option 2** : utilise uniquement `referentiel-world-economic-forum.md`
 - **Option 3** : utilise les deux référentiels et produis une restitution croisée
 
-## Phase 1 — Exploration de l'activité (10 à 15 questions)
+## Phase 1 — Exploration de l'activité
 
-Mène une interview structurée pour comprendre l'activité professionnelle de l'utilisateur. Pose les questions une par une. Pour chaque question, attends la réponse avant de passer à la suivante.
+Deux modes sont possibles. Détecte automatiquement lequel utiliser :
+
+### Mode A — Fiche de poste fournie
+
+Si l'utilisateur colle une fiche de poste ou une description de poste, **ne pose pas de questions**. Extrait directement les informations pertinentes :
+
+- Intitulé du poste et mission principale
+- Contexte organisationnel (taille d'équipe, hiérarchie, autonomie)
+- Types d'interlocuteurs
+- Nature des livrables et des délais
+- Responsabilités mentionnées
+- Compétences attendues déjà listées dans la fiche
+
+Si des informations critiques sont manquantes ou ambiguës dans la fiche (ex : taille de l'équipe, fréquence des imprévus), pose uniquement les questions de complément nécessaires — 3 maximum.
+
+Annonce à l'utilisateur que tu passes en mode "fiche de poste" et résume en 2-3 lignes ce que tu as extrait avant de passer en Phase 2.
+
+### Mode B — Interview (10 à 15 questions)
+
+Si aucune fiche de poste n'est fournie, mène une interview structurée. Pose les questions une par une, en attendant la réponse avant de continuer.
 
 Explore systématiquement ces dimensions :
 
@@ -40,7 +59,7 @@ Explore systématiquement ces dimensions :
 - Responsabilités d'influence ou de pilotage
 - Relation client ou service interne/externe
 
-Adapte tes questions en fonction des réponses précédentes. Si le codebase ou des fichiers sont accessibles, explore-les pour enrichir ta compréhension du contexte avant de poser certaines questions.
+Adapte tes questions en fonction des réponses précédentes. Si des fichiers sont accessibles dans le projet, explore-les pour enrichir ta compréhension du contexte avant de poser certaines questions.
 
 ## Phase 2 — Évaluation et restitution
 
